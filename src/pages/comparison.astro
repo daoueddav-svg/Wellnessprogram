@@ -1,0 +1,161 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { products, expert } from '../data/products';
+
+const top3 = [...products].sort((a, b) => b.expertScore - a.expertScore).slice(0, 3);
+const allSorted = [...products].sort((a, b) => b.expertScore - a.expertScore);
+---
+<MainLayout title="Wellness Program Comparison 2024 | Wellness Sanctuary" description="Expert comparison table of the best wellness programs: Noom, Ritual, Alo Moves, WHOOP, Headspace. Medical criteria, pricing, honest pros & cons.">
+<main class="max-w-screen-2xl mx-auto px-8 py-16">
+
+  <!-- Hero -->
+  <header class="mb-20 text-center md:text-left max-w-3xl">
+    <span class="text-xs uppercase tracking-widest text-[#334537] mb-4 block font-semibold">Comparative Analysis · Updated April 2024</span>
+    <h1 class="text-5xl md:text-6xl text-[#334537] leading-tight mb-6" style="font-family:'Noto Serif',serif;">Clinical Excellence,<br/><span class="italic">Put in Perspective.</span></h1>
+    <p class="text-lg text-[#434843] leading-relaxed">A rigorous evaluation based on 12 medical criteria. Each program is tested and validated by our independent expert panel.</p>
+    <div class="flex items-center gap-3 mt-6">
+      <img class="w-10 h-10 rounded-full object-cover grayscale" src={expert.avatar} alt={expert.name}/>
+      <div>
+        <p class="text-xs font-semibold text-[#334537]">{expert.name}</p>
+        <p class="text-[10px] text-[#737872] uppercase tracking-wide">{expert.title}</p>
+      </div>
+      <span class="ml-2 bg-[#d3e8d5] text-[#334537] text-[10px] uppercase tracking-wider font-bold px-2 py-0.5 rounded-full">✓ Verified</span>
+    </div>
+  </header>
+
+  <!-- Comparison Table Top 3 -->
+  <section class="mb-32 overflow-x-auto no-scrollbar">
+    <div class="min-w-[900px]">
+      <!-- Sticky header -->
+      <div class="sticky top-[73px] z-40 bg-[#f4f4f2] grid rounded-t-xl overflow-hidden" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+        <div class="px-6 py-6"><h3 class="text-lg text-[#334537] font-semibold" style="font-family:'Noto Serif',serif;">Criteria</h3></div>
+        {top3.map(p => (
+          <div class="px-6 py-6 text-center border-l border-[#e8e8e6]">
+            <span class="text-[10px] uppercase tracking-widest text-[#737872] block mb-1">{p.category}</span>
+            <div class="font-semibold text-[#334537] italic" style="font-family:'Noto Serif',serif;">{p.brand}</div>
+            <div class="text-xs text-[#737872]">{p.name}</div>
+            {p.badge && <span class="inline-block mt-2 bg-[#334537] text-white text-[9px] uppercase tracking-wider font-bold px-2 py-0.5 rounded-full">★ {p.badge}</span>}
+          </div>
+        ))}
+      </div>
+      <!-- Table body -->
+      <div class="bg-white shadow-sm rounded-b-xl overflow-hidden">
+        <!-- Expert Score -->
+        <div class="grid border-b border-[#eeeeec]" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+          <div class="px-6 py-8 flex items-center"><span class="text-xs uppercase tracking-widest text-[#5f5e5e] font-semibold">Expert Score</span></div>
+          {top3.map(p => (
+            <div class="px-6 py-8 text-center border-l border-[#eeeeec] flex flex-col items-center justify-center gap-1">
+              <div class="text-2xl font-bold text-[#334537]">{p.expertScore}<span class="text-sm font-light text-[#737872]">/10</span></div>
+              <div class="w-20 h-1 bg-[#e8e8e6] rounded-full overflow-hidden mt-1"><div class="h-full bg-[#334537] rounded-full" style={`width:${p.expertScore*10}%`}></div></div>
+            </div>
+          ))}
+        </div>
+        <!-- User Rating -->
+        <div class="grid border-b border-[#eeeeec] bg-[#f9f9f7]/50" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+          <div class="px-6 py-8 flex items-center"><span class="text-xs uppercase tracking-widest text-[#5f5e5e] font-semibold">User Rating</span></div>
+          {top3.map(p => (
+            <div class="px-6 py-8 text-center border-l border-[#eeeeec]"><span class="font-bold text-xl text-[#334537]">{p.rating}</span><span class="text-sm text-[#737872]"> ★ / 5</span></div>
+          ))}
+        </div>
+        <!-- Price -->
+        <div class="grid border-b border-[#eeeeec]" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+          <div class="px-6 py-8 flex items-center"><span class="text-xs uppercase tracking-widest text-[#5f5e5e] font-semibold">Monthly Cost</span></div>
+          {top3.map(p => (
+            <div class="px-6 py-8 text-center border-l border-[#eeeeec]"><span class="text-2xl font-light text-[#334537]">{p.price}</span></div>
+          ))}
+        </div>
+        <!-- Telehealth -->
+        <div class="grid border-b border-[#eeeeec] bg-[#f9f9f7]/50" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+          <div class="px-6 py-8 flex items-center"><span class="text-xs uppercase tracking-widest text-[#5f5e5e] font-semibold">Telehealth Access</span></div>
+          {top3.map(p => (
+            <div class="px-6 py-8 text-center border-l border-[#eeeeec]">
+              {p.features.telehealth ? <span class="material-symbols-outlined text-[#334537]" style="font-variation-settings:'FILL' 1">check_circle</span> : <span class="material-symbols-outlined text-[#c3c8c1]">remove_circle</span>}
+            </div>
+          ))}
+        </div>
+        <!-- Personal Coach -->
+        <div class="grid border-b border-[#eeeeec]" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+          <div class="px-6 py-8 flex items-center"><span class="text-xs uppercase tracking-widest text-[#5f5e5e] font-semibold">Personal Coach</span></div>
+          {top3.map(p => (
+            <div class="px-6 py-8 text-center border-l border-[#eeeeec]">
+              {p.features.personalCoach ? <span class="material-symbols-outlined text-[#334537]" style="font-variation-settings:'FILL' 1">check_circle</span> : <span class="material-symbols-outlined text-[#c3c8c1]">remove_circle</span>}
+            </div>
+          ))}
+        </div>
+        <!-- Clinically Certified -->
+        <div class="grid border-b border-[#eeeeec] bg-[#f9f9f7]/50" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+          <div class="px-6 py-8 flex items-center"><span class="text-xs uppercase tracking-widest text-[#5f5e5e] font-semibold">Clinically Certified</span></div>
+          {top3.map(p => (
+            <div class="px-6 py-8 text-center border-l border-[#eeeeec]">
+              {p.features.certified ? <span class="material-symbols-outlined text-[#334537]" style="font-variation-settings:'FILL' 1">check_circle</span> : <span class="material-symbols-outlined text-[#c3c8c1]">remove_circle</span>}
+            </div>
+          ))}
+        </div>
+        <!-- Vegan -->
+        <div class="grid border-b border-[#eeeeec]" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+          <div class="px-6 py-8 flex items-center"><span class="text-xs uppercase tracking-widest text-[#5f5e5e] font-semibold">Vegan / Ethical</span></div>
+          {top3.map(p => (
+            <div class="px-6 py-8 text-center border-l border-[#eeeeec]">
+              {p.features.vegan ? <span class="material-symbols-outlined text-[#334537]" style="font-variation-settings:'FILL' 1">check_circle</span> : <span class="material-symbols-outlined text-[#c3c8c1]">remove_circle</span>}
+            </div>
+          ))}
+        </div>
+        <!-- CTA -->
+        <div class="grid" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+          <div class="px-6 py-10"></div>
+          {top3.map(p => (
+            <div class="px-6 py-10 flex justify-center border-l border-[#eeeeec]">
+              <a href={p.affiliateUrl} target="_blank" rel="noopener sponsored">
+                <button class="border-2 border-[#334537] text-[#334537] px-5 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-[#334537] hover:text-white transition-all duration-300 rounded">View Program</button>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Programs List -->
+  <section class="mb-32">
+    <h2 class="text-4xl text-[#334537] mb-12" style="font-family:'Noto Serif',serif;">All Programs Reviewed</h2>
+    <div class="space-y-6">
+      {allSorted.map((p, i) => (
+        <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+          <div class="md:col-span-1"><span class="text-2xl font-light text-[#c3c8c1]">#{i+1}</span></div>
+          <div class="md:col-span-2"><img class="w-16 h-16 rounded-lg object-cover grayscale" src={p.image} alt={p.name}/></div>
+          <div class="md:col-span-4">
+            <span class="text-[10px] uppercase tracking-widest text-[#737872]">{p.category}</span>
+            <h3 class="text-xl text-[#334537] font-semibold mt-1" style="font-family:'Noto Serif',serif;">{p.brand}</h3>
+            <p class="text-sm text-[#434843] mt-1">{p.tagline}</p>
+          </div>
+          <div class="md:col-span-2 text-center">
+            <div class="text-2xl font-bold text-[#334537]">{p.expertScore}<span class="text-sm font-light text-[#737872]">/10</span></div>
+            <div class="text-xs text-[#737872] uppercase tracking-wide mt-1">Expert score</div>
+          </div>
+          <div class="md:col-span-3 flex flex-col items-end gap-3">
+            <span class="text-xl font-light text-[#334537]">{p.price}</span>
+            <a href={p.affiliateUrl} target="_blank" rel="noopener sponsored">
+              <button class="bg-[#334537] text-white px-6 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-[#4a5d4e] transition-all rounded">View →</button>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- E-E-A-T -->
+  <section class="bg-[#f4f4f2] rounded-2xl p-12 mb-16">
+    <div class="flex flex-col md:flex-row items-start gap-10">
+      <img class="w-20 h-20 rounded-full object-cover grayscale flex-shrink-0" src={expert.avatar} alt={expert.name}/>
+      <div>
+        <span class="bg-[#334537] text-white text-[10px] uppercase tracking-widest font-bold px-3 py-1 rounded-full">✓ Medically Reviewed</span>
+        <p class="font-semibold text-[#334537] text-xl mt-4 mb-1" style="font-family:'Noto Serif',serif;">{expert.name}</p>
+        <p class="text-xs text-[#737872] uppercase tracking-wide mb-4">{expert.credentials}</p>
+        <p class="text-sm text-[#434843] leading-relaxed mb-4">{expert.bio}</p>
+        <p class="text-xs text-[#737872] italic border-l-2 border-[#c3c8c1] pl-3">{expert.disclosure}</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+</MainLayout>

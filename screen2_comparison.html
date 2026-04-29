@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#d3e8d5",
+                        "outline": "#737872",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#e3bdc2",
+                        "on-tertiary-container": "#ecc6ca",
+                        "surface": "#f9f9f7",
+                        "error": "#ba1a1a",
+                        "inverse-surface": "#2f3130",
+                        "inverse-primary": "#b7ccb9",
+                        "on-error-container": "#93000a",
+                        "primary": "#334537",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "secondary-container": "#e4e2e1",
+                        "on-tertiary-fixed-variant": "#5b4043",
+                        "primary-fixed-dim": "#b7ccb9",
+                        "on-secondary-container": "#656464",
+                        "surface-container-high": "#e8e8e6",
+                        "on-tertiary-fixed": "#2b1519",
+                        "surface-container": "#eeeeec",
+                        "on-secondary-fixed-variant": "#474747",
+                        "surface-bright": "#f9f9f7",
+                        "tertiary-container": "#6e5155",
+                        "on-surface": "#1a1c1b",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#0e1f13",
+                        "on-primary-container": "#c0d5c2",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#5f5e5e",
+                        "surface-tint": "#506354",
+                        "inverse-on-surface": "#f1f1ef",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#c3c8c1",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#553a3e",
+                        "tertiary-fixed": "#ffd9de",
+                        "surface-container-highest": "#e2e3e1",
+                        "error-container": "#ffdad6",
+                        "background": "#f9f9f7",
+                        "primary-container": "#4a5d4e",
+                        "secondary-fixed": "#e4e2e1",
+                        "on-background": "#1a1c1b",
+                        "surface-dim": "#dadad8",
+                        "on-primary-fixed-variant": "#394b3d",
+                        "surface-container-low": "#f4f4f2",
+                        "on-surface-variant": "#434843",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "surface-variant": "#e2e3e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "display": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #f9f9f7; color: #1a1c1b; }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(20px); border-bottom: 0px !important; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="font-serif italic text-2xl text-[#334537] dark:text-stone-100">Wellness Sanctuary</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-[#334537] font-semibold border-b-2 border-[#334537] pb-1 font-sans text-sm tracking-wide" href="#">Treatments</a>
+<a class="text-stone-500 hover:text-[#334537] transition-colors font-sans text-sm tracking-wide" href="#">Clinics</a>
+<a class="text-stone-500 hover:text-[#334537] transition-colors font-sans text-sm tracking-wide" href="#">Expert Insights</a>
+<a class="text-stone-500 hover:text-[#334537] transition-colors font-sans text-sm tracking-wide" href="#">Reviews</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-md text-sm font-semibold hover:opacity-80 transition-opacity active:opacity-90 active:scale-[0.99]">
+                    Get Consulted
+                </button>
+</div>
+</div>
+<div class="bg-stone-100/50 dark:bg-stone-800/50 h-[1px] w-full"></div>
+</nav>
+<main class="max-w-screen-2xl mx-auto px-8 py-16">
+<!-- Hero Section -->
+<header class="mb-20 text-center md:text-left max-w-3xl">
+<span class="font-label text-xs uppercase tracking-widest text-primary mb-4 block">Analyse Comparative</span>
+<h1 class="font-display text-5xl md:text-6xl text-primary leading-tight mb-6">
+                L'Excellence Clinique, <br/><span class="italic">Mise en Perspective.</span>
+</h1>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed">
+                Une évaluation rigoureuse de nos trois programmes phares, conçue pour guider votre parcours vers une vitalité optimale. Chaque protocole est validé par notre conseil d'experts médicaux.
+            </p>
+</header>
+<!-- Comparison Table Container -->
+<section class="mb-32 overflow-x-auto no-scrollbar">
+<div class="min-w-[1000px]">
+<!-- Sticky Table Header -->
+<div class="sticky top-[73px] z-40 bg-surface-container-low grid grid-cols-4 items-center px-8 py-8 rounded-t-xl">
+<div class="col-span-1">
+<h3 class="font-display text-xl text-primary">Programmes Premium</h3>
+</div>
+<div class="col-span-1 text-center">
+<div class="font-serif italic text-lg text-primary">The Longevity Protocol</div>
+</div>
+<div class="col-span-1 text-center">
+<div class="font-serif italic text-lg text-primary">Somatic Restoration</div>
+</div>
+<div class="col-span-1 text-center">
+<div class="font-serif italic text-lg text-primary">Neuro-Performance</div>
+</div>
+</div>
+<!-- Comparison Rows -->
+<div class="bg-surface-container-lowest shadow-sm rounded-b-xl overflow-hidden">
+<!-- Rating Row -->
+<div class="grid grid-cols-4 items-center px-8 py-10 border-b border-surface-container">
+<div class="col-span-1">
+<span class="font-label text-xs uppercase tracking-widest text-secondary">Note des Experts</span>
+</div>
+<div class="col-span-1 text-center">
+<div class="flex items-center justify-center gap-1 text-primary">
+<span class="font-bold text-xl">4.9</span>
+<span class="text-sm opacity-60">/ 5</span>
+</div>
+</div>
+<div class="col-span-1 text-center">
+<div class="flex items-center justify-center gap-1 text-primary">
+<span class="font-bold text-xl">4.8</span>
+<span class="text-sm opacity-60">/ 5</span>
+</div>
+</div>
+<div class="col-span-1 text-center">
+<div class="flex items-center justify-center gap-1 text-primary">
+<span class="font-bold text-xl">5.0</span>
+<span class="text-sm opacity-60">/ 5</span>
+</div>
+</div>
+</div>
+<!-- Unique Strength Row -->
+<div class="grid grid-cols-4 items-center px-8 py-10 border-b border-surface-container bg-surface-container-low/30">
+<div class="col-span-1">
+<span class="font-label text-xs uppercase tracking-widest text-secondary">Force Unique</span>
+</div>
+<div class="col-span-1 text-center px-4">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Biohacking Avancé</span>
+</div>
+<div class="col-span-1 text-center px-4">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Récupération Holistique</span>
+</div>
+<div class="col-span-1 text-center px-4">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Maîtrise Cognitive</span>
+</div>
+</div>
+<!-- Price Row -->
+<div class="grid grid-cols-4 items-center px-8 py-10 border-b border-surface-container">
+<div class="col-span-1">
+<span class="font-label text-xs uppercase tracking-widest text-secondary">Investissement</span>
+</div>
+<div class="col-span-1 text-center text-primary font-light text-2xl">2.400 €</div>
+<div class="col-span-1 text-center text-primary font-light text-2xl">1.850 €</div>
+<div class="col-span-1 text-center text-primary font-light text-2xl">3.200 €</div>
+</div>
+<!-- CTA Row -->
+<div class="grid grid-cols-4 items-center px-8 py-12">
+<div class="col-span-1"></div>
+<div class="col-span-1 flex justify-center">
+<button class="border-2 border-primary text-primary px-4 py-2 text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-300">Vérifier la disponibilité</button>
+</div>
+<div class="col-span-1 flex justify-center">
+<button class="border-2 border-primary text-primary px-4 py-2 text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-300">Vérifier la disponibilité</button>
+</div>
+<div class="col-span-1 flex justify-center">
+<button class="border-2 border-primary text-primary px-4 py-2 text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-300">Vérifier la disponibilité</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Review Section -->
+<section class="mb-32">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-display text-4xl text-primary">Retours d'Expérience</h2>
+<p class="font-body text-on-surface-variant mt-2">Analysés par notre comité scientifique.</p>
+</div>
+<div class="flex items-center gap-2 bg-primary-fixed/50 px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label text-[10px] uppercase font-bold tracking-widest text-primary">Validé par un professionnel</span>
+</div>
+</div>
+<!-- Review Cards Grid (Editorial Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Card 1 -->
+<div class="md:col-span-7 bg-surface-container-lowest p-10 rounded-xl flex flex-col gap-8 shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-4">
+<img class="w-16 h-16 rounded-full object-cover grayscale" data-alt="A portrait of a professional woman in her 40s with a serene expression, photographed in a high-key studio setting with soft side lighting. The aesthetic is clean and minimalist, reflecting a luxury wellness brand. She is wearing a soft linen shirt in a neutral stone color. The mood is calm, expert-led, and sophisticated, echoing the digital sanctuary branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL5twYmoL5oWbfMgMnrA08IcULGJOY5mZm_RhXnz_a9M3kU66-IfbiSf5wad60htDor5R11OPsQkGIhbeQM-E9NX6748MRhv_9HTbDIMuCUyErTvR69HgZhB1pJIwnK7QSLCEPtKb8SB8Zh8Aj2AwP5OEtlP1icD5eAtIuNzdNz3CNmCFUsNCNIoVlaMSn66LHwPXSmbvxZwB4VuW2bSOzHaP_YufdGRTQ7j21QyPwmVmh-NGRJpDle7eA-FAb8kPy9HdisU_ZUAk"/>
+<div>
+<p class="font-serif text-lg text-primary italic">Dr. Elena Rostova</p>
+<p class="font-label text-[10px] uppercase text-secondary">Directrice Clinique, Zurich</p>
+</div>
+</div>
+<div class="text-primary/40">
+<span class="material-symbols-outlined text-5xl">format_quote</span>
+</div>
+</div>
+<p class="font-body text-lg leading-relaxed italic">
+                        "Le Longevity Protocol n'est pas qu'un simple traitement ; c'est une reprogrammation biologique complète. La précision des données recueillies est sans équivalent sur le marché actuel."
+                    </p>
+<div class="grid grid-cols-2 gap-8 pt-8 border-t border-surface-container">
+<div>
+<span class="font-label text-[10px] uppercase font-bold text-primary block mb-3">Avantages</span>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-[#4A5D4E]">check_circle</span>
+                                    Analyses génomiques précises
+                                </li>
+<li class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-[#4A5D4E]">check_circle</span>
+                                    Suivi nutritionnel sur mesure
+                                </li>
+</ul>
+</div>
+<div>
+<span class="font-label text-[10px] uppercase font-bold text-tertiary block mb-3">Considérations</span>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-tertiary">info</span>
+                                    Engagement temporel élevé
+                                </li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Card 2 (Image Focus) -->
+<div class="md:col-span-5 bg-primary relative overflow-hidden rounded-xl min-h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay" data-alt="A serene interior shot of a high-end medical wellness clinic featuring minimalist stone walls and soft, atmospheric lighting. A single plant in a ceramic vase sits on a textured stone table. The environment is sterile yet warm, using the brand's sage green and off-white color palette. There is a sense of atmospheric depth and professional sanctuary, creating a peaceful, luxury medical experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIDRzk6YIYCLaY5e9NHFFXJ8F4WsQ1pHVA7K3bLXOZrJ8F3RnZFVa0khMw_UYnpbnVPv48M3mjqafS8Rio8n4N3y1DGChLIhf7OHOp9Uv5JV7j46_SXJVczkcH_sKcQRUpRfmZ4klNgqdnFxk6DgE8o5lOLNzWE3ISqPt4-L70ZYOrRmbb80BaGZzKmoxcm1Ukb4ySQOrpWi3M8ByEDPBWJfRuFMUrxGxguHbX8hOVJ78vDEBx1s1AX_sHp2NIX5pn1Kj0nTVclP4"/>
+<div class="relative z-10 p-10 flex flex-col h-full justify-end text-on-primary">
+<span class="font-label text-[10px] uppercase tracking-widest mb-4 opacity-70">Focus Somatique</span>
+<h3 class="font-display text-3xl mb-4 italic">"Une paix retrouvée."</h3>
+<p class="font-body text-sm opacity-90 leading-relaxed">
+                            L'expérience Somatic Restoration transforme radicalement la gestion du stress chronique par des thérapies basées sur le système nerveux autonome.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic Expert Insight Section (Asymmetric) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1">
+<div class="bg-surface-container-high rounded-xl p-1 overflow-hidden">
+<img class="rounded-lg shadow-2xl" data-alt="Close-up of a modern laboratory setting with specialized medical glassware and advanced biometric monitoring screens. The lighting is soft and natural, emphasizing the professional, medical-grade expertise of the clinic. The color palette is dominated by stone grays and sage greens, maintaining the high-end digital sanctuary aesthetic. The mood is clean, technological, and deeply trustworthy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_KHB2XZEDd1iY9dh-Iv6ldCjWuCx5mKF_L6F_AmJT7kvUtJInDtlpjT0CaPci0JrA6-uy9bC1MQTihVr1wWdpOFhCT39CSLK1jvFi9QlbAF9X7IgRxPMduVkbj8191kJG99dme0NizWb8v-Tk9SwFrdWuwXAJZC7gXbMsb8V__3dq6ZbLp5hIgbFDkPPzl4UMZ5lGqJfesroKslXhjbT9-C4IVmQQlvVlnJzCkL0Xj53d6WnuIZS_lOE--DdYrio4_6pbLxzXVf4"/>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="font-label text-xs uppercase tracking-widest text-primary mb-4 block">Notre Méthodologie</span>
+<h2 class="font-display text-4xl text-primary leading-tight mb-8">Pourquoi nos comparaisons sont <span class="italic">différentes</span>.</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">magnification_small</span>
+</div>
+<div>
+<h4 class="font-serif text-lg text-primary mb-2">Protocoles Basés sur les Preuves</h4>
+<p class="font-body text-sm text-on-surface-variant">Chaque critère de comparaison est ancré dans la littérature scientifique actuelle et les résultats cliniques mesurés.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">psychology</span>
+</div>
+<div>
+<h4 class="font-serif text-lg text-primary mb-2">Comité d'Examen Médical</h4>
+<p class="font-body text-sm text-on-surface-variant">Toutes nos évaluations sont validées par un panel de médecins spécialisés en médecine préventive.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 w-full py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-screen-2xl mx-auto">
+<div class="font-serif text-lg text-[#334537]">Wellness Sanctuary</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-sans text-xs uppercase tracking-widest text-stone-500 hover:text-[#4A5D4E] transition-colors transition-all duration-300" href="#">Privacy Policy</a>
+<a class="font-sans text-xs uppercase tracking-widest text-stone-500 hover:text-[#4A5D4E] transition-colors transition-all duration-300" href="#">Terms of Service</a>
+<a class="font-sans text-xs uppercase tracking-widest text-stone-500 hover:text-[#4A5D4E] transition-colors transition-all duration-300" href="#">Expert Board</a>
+<a class="font-sans text-xs uppercase tracking-widest text-stone-500 hover:text-[#4A5D4E] transition-colors transition-all duration-300" href="#">Contact Us</a>
+</div>
+</div>
+<div class="pt-12 mt-12 bg-stone-200 dark:bg-stone-800 max-w-screen-2xl mx-auto"></div>
+<div class="text-center mt-8">
+<p class="font-sans text-xs uppercase tracking-widest text-stone-500">© 2024 The Clinical Sanctuary. All rights reserved. Medical-grade wellness comparison.</p>
+</div>
+</footer>
+</body></html>

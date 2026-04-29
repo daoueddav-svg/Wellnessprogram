@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#d3e8d5",
+                      "outline": "#737872",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed-dim": "#e3bdc2",
+                      "on-tertiary-container": "#ecc6ca",
+                      "surface": "#f9f9f7",
+                      "error": "#ba1a1a",
+                      "inverse-surface": "#2f3130",
+                      "inverse-primary": "#b7ccb9",
+                      "on-error-container": "#93000a",
+                      "primary": "#334537",
+                      "on-secondary-fixed": "#1b1c1c",
+                      "secondary-container": "#e4e2e1",
+                      "on-tertiary-fixed-variant": "#5b4043",
+                      "primary-fixed-dim": "#b7ccb9",
+                      "on-secondary-container": "#656464",
+                      "surface-container-high": "#e8e8e6",
+                      "on-tertiary-fixed": "#2b1519",
+                      "surface-container": "#eeeeec",
+                      "on-secondary-fixed-variant": "#474747",
+                      "surface-bright": "#f9f9f7",
+                      "tertiary-container": "#6e5155",
+                      "on-surface": "#1a1c1b",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed": "#0e1f13",
+                      "on-primary-container": "#c0d5c2",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary": "#5f5e5e",
+                      "surface-tint": "#506354",
+                      "inverse-on-surface": "#f1f1ef",
+                      "on-tertiary": "#ffffff",
+                      "outline-variant": "#c3c8c1",
+                      "on-primary": "#ffffff",
+                      "tertiary": "#553a3e",
+                      "tertiary-fixed": "#ffd9de",
+                      "surface-container-highest": "#e2e3e1",
+                      "error-container": "#ffdad6",
+                      "background": "#f9f9f7",
+                      "primary-container": "#4a5d4e",
+                      "secondary-fixed": "#e4e2e1",
+                      "on-background": "#1a1c1b",
+                      "surface-dim": "#dadad8",
+                      "on-primary-fixed-variant": "#394b3d",
+                      "surface-container-low": "#f4f4f2",
+                      "on-surface-variant": "#434843",
+                      "secondary-fixed-dim": "#c8c6c6",
+                      "surface-variant": "#e2e3e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Noto Serif"],
+                      "display": ["Noto Serif"],
+                      "body": ["Manrope"],
+                      "label": ["Manrope"]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; background-color: #f9f9f7; color: #1a1c1b; }
+        h1, h2, h3 { font-family: 'Noto Serif', serif; }
+        .glass-header {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-stone-50/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="font-serif italic text-2xl text-[#334537]">Wellness Sanctuary</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#334537] font-semibold border-b-2 border-[#334537] pb-1 font-sans text-sm tracking-wide" href="#">Treatments</a>
+<a class="text-stone-500 hover:text-[#334537] transition-colors font-sans text-sm tracking-wide" href="#">Clinics</a>
+<a class="text-stone-500 hover:text-[#334537] transition-colors font-sans text-sm tracking-wide" href="#">Expert Insights</a>
+<a class="text-stone-500 hover:text-[#334537] transition-colors font-sans text-sm tracking-wide" href="#">Reviews</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-md text-sm font-medium hover:opacity-90 active:scale-[0.99] transition-all">
+                    Get Consulted
+                </button>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container">
+<img alt="User profile" data-alt="Professional studio portrait of a healthcare consultant in a bright, airy environment. The lighting is soft and natural, emphasizing a clean and trustworthy medical-grade aesthetic. The background consists of subtle neutral tones of stone and off-white, reflecting a quiet luxury wellness atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCCBiW-62CmZ8fJevQa_MgC9tXqOOJW_A-r_lONY4NUF_0KoRurqBop-8t7qmBhW2c_Cyo981ZwuutOsh8oaleBfOC0oWLvK9JPIpWAu2s4KIZka-wgNJ7wGvcCsS_j7q_kjb1zvgMA9Jp-XWsI2JZj9wMyDhajJZdQUcAC5k5-Hx_VHov3UuVz_gpPMomSgRZxS9qIeG48TtUU8JTALEj99q88hOwdv8CBHS45VQEjkrkxrlz4-QUCbO_krAMXOBBix5gY6NjK1w"/>
+</div>
+</div>
+</div>
+<div class="bg-stone-100/50 h-[1px] w-full"></div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center justify-center overflow-hidden px-8">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-15 grayscale mix-blend-multiply" data-alt="A serene and minimalist spa interior featuring natural stone walls and a thin stream of water falling into a still pool. The lighting is ethereal and soft, creating a sanctuary-like atmosphere with a focus on textures of sage green and off-white. The scene embodies quiet luxury and professional medical wellness standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEBn1dZoCKgtCp6Y0ykeKJfIkfqEQ6zvwg1Refve6oZbs3JAcJ4UWyYEiTeBIs139TeRz0P-y6Evi8dbNvVVhex3uBbop8TpFtPyfeexx5HmQRfkowMrVaYVpGpk5cPkkECl95N-qo2xhT83fJ5gk7iIhEysCE-0AoL2G3wjyBJ5CBT90CXkOe6Gft5xVPZ_3jX0n5U4byqmTD9NgY8azH6JzTq7Y5p8IsigoTw5dkil6sQczSJrwBXb0rNw9KAJyxzpL99uDZUyQ"/>
+<div class="absolute inset-0 bg-gradient-to-b from-surface/0 via-surface/40 to-surface"></div>
+</div>
+<div class="relative z-10 max-w-4xl text-center">
+<span class="inline-block label-sm uppercase tracking-[0.2em] text-primary mb-6 font-semibold">The Future of Care</span>
+<h1 class="text-5xl md:text-7xl lg:text-8xl text-primary leading-[1.1] mb-8">Votre parcours bien-être, optimisé par la science et la tech</h1>
+<p class="text-lg md:text-xl text-on-surface-variant font-body max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Une approche clinique personnalisée alliant technologies de pointe et expertise médicale pour transformer votre santé globale.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-xl text-lg font-medium hover:shadow-xl transition-all active:scale-95">
+                        Start Your Personal Journey
+                    </button>
+<button class="flex items-center gap-2 text-primary font-semibold py-4 group">
+<span>Discover our method</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Bento Grid Section -->
+<section class="max-w-screen-2xl mx-auto px-8 py-24 bg-surface-container-low/30">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-4xl md:text-5xl text-primary mb-6">Flagship Wellness Programs</h2>
+<p class="text-on-surface-variant font-body text-lg">
+                        Selected protocols validated by our medical board, integrating SaaS monitoring, premium fitness, and direct telehealth access.
+                    </p>
+</div>
+<div class="flex gap-2">
+<div class="px-4 py-2 rounded-full border border-outline-variant text-sm font-label uppercase tracking-widest text-outline">Science-Back</div>
+<div class="px-4 py-2 rounded-full border border-outline-variant text-sm font-label uppercase tracking-widest text-outline">Tech-Enabled</div>
+</div>
+</div>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px] md:auto-rows-[240px]">
+<!-- SaaS Tile -->
+<div class="md:col-span-8 md:row-span-2 group relative overflow-hidden rounded-xl bg-surface-container-lowest transition-all hover:shadow-2xl">
+<div class="absolute top-6 right-6 z-20 flex items-center gap-2 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter text-primary">Expert Verification</span>
+</div>
+<div class="h-full flex flex-col md:flex-row">
+<div class="w-full md:w-1/2 p-10 flex flex-col justify-end">
+<h3 class="text-3xl text-primary mb-4">Precision SaaS Monitoring</h3>
+<p class="text-on-surface-variant font-body mb-6">Real-time biological data tracking integrated with AI-driven lifestyle recommendations.</p>
+<button class="w-fit text-primary font-bold border-b-2 border-primary-fixed-dim pb-1 hover:border-primary transition-all">Explore Platform</button>
+</div>
+<div class="w-full md:w-1/2 relative h-64 md:h-full">
+<img class="w-full h-full object-cover grayscale brightness-90 group-hover:scale-105 transition-transform duration-700" data-alt="A clean, minimalist workspace featuring a high-resolution tablet displaying sophisticated medical data charts and health metrics. The room is bathed in soft, clinical-grade lighting with surfaces made of premium light stone. The aesthetic is professional, data-centric, and quiet luxury, emphasizing trust and scientific accuracy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7abyYKb9cPfmc1o3iNnwmDUbjtkrXFH6QzCkqYVZBeR4rKzBhdcVPJJUVimGDBd6rxgZnwu9W_m9LPmUrOQAzHnxXCxPT9GycADZIqCShEccwuYGlCvMPAAnWRXLfcIrydGcBBbkHOvIEmgiHTAXlOIP2wRdNqOKiE15I2eipnco0JVAVBydg4gzU-tOoKdGy5199MEeNbf0c5jtZ5R69n0uXTb7yiE0XYVXQlyfJJl1cccGQxekuKSxPWNzm4Jxl2cu9wQKMqCk"/>
+</div>
+</div>
+</div>
+<!-- Tele-health Tile -->
+<div class="md:col-span-4 md:row-span-3 group relative overflow-hidden rounded-xl bg-primary text-on-primary p-10 flex flex-col justify-between">
+<div class="absolute top-6 right-6 z-20 flex items-center gap-2 bg-primary-container px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-primary-fixed text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter text-on-primary-container">Expert Verification</span>
+</div>
+<div>
+<span class="material-symbols-outlined text-4xl mb-6">medical_services</span>
+<h3 class="text-3xl font-serif mb-6 leading-tight">Tele-Health Executive Concierge</h3>
+<p class="text-primary-fixed font-body text-sm leading-relaxed mb-8 opacity-80">
+                            24/7 dedicated access to a board of specialists. Personalized consultations that bridge the gap between technology and human empathy.
+                        </p>
+</div>
+<div class="relative w-full aspect-square rounded-lg overflow-hidden border border-primary-container">
+<img class="w-full h-full object-cover opacity-60 mix-blend-luminosity" data-alt="A close-up of a professional doctor using a sleek, modern stethoscope in a bright, white-walled clinic. The lighting is soft and even, highlighting the clean textures of medical professional wear. The composition is artistic and high-end, focusing on the calm and reassuring nature of medical expertise within a sanctuary environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGXBW-z6bNaLodyr34uwERRpiY4ZMOAJ-0B0ZQsR5hEDj2-MblnCEKQBeRelpDZO0sZ8PNRgPoIj0r_1luSqwX0cMRBYAIQ7b0Ep8avuh40cjk58nXKPxdjLWEqbgbT864Dy06toWa8fr6JhQdfEPGKd_dTzUDrfQtl3EUDd2vGngaH7gUJzFgxALGl2c8FavB4dPBWqS4of68dLxdh_euBVymPqnHSlr_GCCw_P57P57VV1ibcGGtUHT9dcyR3hYt7476SlAgIRE"/>
+</div>
+</div>
+<!-- Fitness Tile -->
+<div class="md:col-span-4 md:row-span-2 group relative overflow-hidden rounded-xl bg-surface-container-lowest p-8 flex flex-col hover:shadow-xl transition-all">
+<div class="absolute top-4 right-4 z-20 flex items-center gap-2 bg-stone-100/80 backdrop-blur px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[8px] font-bold uppercase tracking-tighter text-primary">Expert Verification</span>
+</div>
+<h3 class="text-2xl text-primary mb-4 pr-12">Fitness Premium Protocols</h3>
+<p class="text-on-surface-variant font-body text-sm mb-6">Bespoke movement therapy designed for high-performance recovery and longevity.</p>
+<div class="mt-auto h-40 relative overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A sophisticated home gym interior with minimalist wooden equipment and soft sage green yoga mats. Natural light floods the space through large windows, highlighting the organic materials and serene atmosphere. The scene represents premium wellness, combining physical discipline with quiet luxury aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe_wm21wJ8uHnmqp9zsW_DmHHkkWU9U1QI7QP1NOoMuyvIOfVufAup6Npk1YS3ggdA8hOh06VjNMqCMjtqsgH34pPdD-0Rns_gOJvRXUzCdXGG93LK61YMTRRfnjz5lQ7hcsNluBZUMSTlJH4tDMlTj1aJhKVG6yudebJ_zdo-mzpctV8HxQCCYNJ3gmdG744I-GtCy66FGMnDxutmEh8cwQzEVAvEBlvDcTgNKbLzEhqDfEkzbo3K4Mzx41G_jwgXRJnOUaWDZlY"/>
+</div>
+</div>
+<!-- AI Assessment Tile -->
+<div class="md:col-span-4 md:row-span-1 group relative overflow-hidden rounded-xl bg-primary-container text-on-primary-container p-6 flex items-center justify-between">
+<div>
+<h4 class="text-xl font-serif mb-1">AI Health Assessment</h4>
+<p class="text-xs uppercase tracking-widest opacity-70">Interactive Analysis</p>
+</div>
+<button class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">play_arrow</span>
+</button>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-8 text-center max-w-4xl mx-auto">
+<h2 class="text-4xl md:text-6xl text-primary mb-8 italic">Ready to redefine your baseline?</h2>
+<p class="text-on-surface-variant font-body text-lg mb-12">
+                Join our waiting list for the next intake of our precision wellness program. Clinical results, sophisticated care.
+            </p>
+<div class="inline-flex flex-col sm:flex-row gap-4 w-full justify-center">
+<input class="bg-surface-container-low border-none rounded-xl px-8 py-4 w-full sm:w-80 focus:ring-1 focus:ring-primary text-primary transition-all" placeholder="Enter your professional email" type="email"/>
+<button class="bg-primary text-on-primary px-10 py-4 rounded-xl text-lg font-medium hover:bg-primary-container transition-all">
+                    Start Your Personal Journey
+                </button>
+</div>
+<p class="mt-6 text-xs text-outline uppercase tracking-widest">Limited availability for Q4 2024</p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 py-12 px-8 w-full">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-screen-2xl mx-auto">
+<div class="font-serif text-lg text-[#334537]">The Clinical Sanctuary</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-sans text-xs uppercase tracking-widest text-stone-500 hover:text-[#4A5D4E] transition-colors" href="#">Privacy Policy</a>
+<a class="font-sans text-xs uppercase tracking-widest text-stone-500 hover:text-[#4A5D4E] transition-colors" href="#">Terms of Service</a>
+<a class="font-sans text-xs uppercase tracking-widest text-stone-500 hover:text-[#4A5D4E] transition-colors" href="#">Expert Board</a>
+<a class="font-sans text-xs uppercase tracking-widest text-stone-500 hover:text-[#4A5D4E] transition-colors" href="#">Contact Us</a>
+</div>
+</div>
+<div class="pt-12 mt-12 bg-stone-200 text-center">
+<p class="font-sans text-xs uppercase tracking-widest text-stone-800 pb-12">
+                © 2024 The Clinical Sanctuary. All rights reserved. Medical-grade wellness comparison.
+            </p>
+</div>
+</footer>
+</body></html>
