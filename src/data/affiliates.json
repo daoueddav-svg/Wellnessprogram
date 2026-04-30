@@ -1,0 +1,11 @@
+{
+  "ritual-multivitamin": { "name": "Ritual", "finalUrl": "https://ritual.com/?affiliate=YOUR_IMPACT_ID" },
+  "noom": { "name": "Noom", "finalUrl": "https://www.noom.com/?affiliate=YOUR_IMPACT_ID" },
+  "hyperice": { "name": "Hyperice", "finalUrl": "https://hyperice.com/?affiliate=YOUR_IMPACT_ID" },
+  "alo-moves": { "name": "Alo Moves", "finalUrl": "https://www.alomoves.com/?affiliate=YOUR_IMPACT_ID" },
+  "headspace": { "name": "Headspace", "finalUrl": "https://www.headspace.com/?affiliate=YOUR_IMPACT_ID" },
+  "whoop": { "name": "WHOOP", "finalUrl": "https://www.whoop.com/?affiliate=YOUR_IMPACT_ID" },
+  "levels-health": { "name": "Levels", "finalUrl": "https://www.levelshealth.com/?affiliate=YOUR_IMPACT_ID" },
+  "eight-sleep": { "name": "Eight Sleep", "finalUrl": "https://www.eightsleep.com/?affiliate=YOUR_IMPACT_ID" },
+  "care-of": { "name": "Care/of", "finalUrl": "https://www.takecareof.com/?affiliate=YOUR_IMPACT_ID" }
+}

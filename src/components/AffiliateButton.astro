@@ -1,0 +1,27 @@
+---
+import { affiliates } from '../data/affiliates';
+
+export interface Props {
+  id: string;
+  text?: string;
+  className?: string;
+  outline?: boolean;
+}
+
+const { id, text = "View Program", className = "", outline = false } = Astro.props;
+
+const affiliate = affiliates[id];
+
+if (!affiliate) {
+  throw new Error(`Affiliate ID "${id}" not found.`);
+}
+
+const baseClasses = "text-center transition-all font-bold uppercase tracking-widest rounded text-xs px-6 py-2.5";
+const styleClasses = outline 
+  ? "border-2 border-[#334537] text-[#334537] hover:bg-[#334537] hover:text-white"
+  : "bg-[#334537] text-white hover:bg-[#4a5d4e]";
+---
+
+<a href={affiliate.goUrl} target="_blank" rel="noopener sponsored" class={`${baseClasses} ${styleClasses} ${className}`}>
+  {text}
+</a>

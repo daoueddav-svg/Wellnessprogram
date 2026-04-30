@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import AffiliateButton from '../components/AffiliateButton.astro';
 import { products, expert } from '../data/products';
 
 const top3 = [...products].sort((a, b) => b.expertScore - a.expertScore).slice(0, 3);
@@ -105,9 +106,7 @@ const allSorted = [...products].sort((a, b) => b.expertScore - a.expertScore);
           <div class="px-6 py-10"></div>
           {top3.map(p => (
             <div class="px-6 py-10 flex justify-center border-l border-[#eeeeec]">
-              <a href={p.affiliateUrl} target="_blank" rel="noopener sponsored">
-                <button class="border-2 border-[#334537] text-[#334537] px-5 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-[#334537] hover:text-white transition-all duration-300 rounded">View Program</button>
-              </a>
+              <AffiliateButton id={p.id} text="View Program" outline={true} />
             </div>
           ))}
         </div>
@@ -134,9 +133,7 @@ const allSorted = [...products].sort((a, b) => b.expertScore - a.expertScore);
           </div>
           <div class="md:col-span-3 flex flex-col items-end gap-3">
             <span class="text-xl font-light text-[#334537]">{p.price}</span>
-            <a href={p.affiliateUrl} target="_blank" rel="noopener sponsored">
-              <button class="bg-[#334537] text-white px-6 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-[#4a5d4e] transition-all rounded">View →</button>
-            </a>
+            <AffiliateButton id={p.id} text="View →" />
           </div>
         </div>
       ))}

@@ -1,5 +1,5 @@
 export type Category = "Weight Loss" | "Supplements" | "Fitness" | "Mental Health" | "Sleep" | "Nutrition" | "Recovery";
-
+import { affiliates } from './affiliates';
 export interface Product {
   id: string;
   name: string;
@@ -315,6 +315,13 @@ export const products: Product[] = [
     isFeatured: false,
   },
 ];
+
+// Apply internal redirect URLs from central affiliates configuration
+products.forEach(p => {
+  if (affiliates[p.id]) {
+    p.affiliateUrl = affiliates[p.id].goUrl;
+  }
+});
 
 // ── Helpers ──────────────────────────────────────────────────────────
 
