@@ -11,5 +11,7 @@
   "ag1": { "name": "AG1", "finalUrl": "https://athleticgreens.com/?affiliate=YOUR_IMPACT_ID" },
   "fs-greens": { "name": "FS Greens", "finalUrl": "https://freesoul.com/?affiliate=YOUR_IMPACT_ID" },
   "mind-lab-pro": { "name": "Mind Lab Pro", "finalUrl": "https://www.mindlabpro.com/?affiliate=YOUR_IMPACT_ID" },
-  "hunter-focus": { "name": "Hunter Focus", "finalUrl": "https://www.hunterevolve.com/hunter-focus/?affiliate=YOUR_IMPACT_ID" }
+  "hunter-focus": { "name": "Hunter Focus", "finalUrl": "https://www.hunterevolve.com/hunter-focus/?affiliate=YOUR_IMPACT_ID" },
+  "future-kind": { "name": "Future Kind", "finalUrl": "https://www.futurekind.com/?affiliate=YOUR_IMPACT_ID" },
+  "performance-lab": { "name": "Performance Lab", "finalUrl": "https://www.performancelab.com/?affiliate=YOUR_IMPACT_ID" }
 }
