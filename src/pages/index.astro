@@ -61,21 +61,28 @@ import { featuredProducts, expert } from '../data/products';
         </a>
       )}
       {featuredProducts[1] && (
-        <a href={featuredProducts[1].affiliateUrl} target="_blank" rel="noopener sponsored" class="md:col-span-4 group relative overflow-hidden rounded-xl bg-emerald-600 text-white p-10 flex flex-col justify-between min-h-[380px]">
-          {featuredProducts[1].badge && <div class="absolute top-6 right-6 bg-[#4a5d4e] px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#d3e8d5]">★ {featuredProducts[1].badge}</div>}
-          <div>
-            <span class="text-xs uppercase tracking-widest text-[#b7ccb9] mb-4 block">{featuredProducts[1].category}</span>
-            <h3 class="text-3xl mb-2" style="font-family:'Noto Serif',serif;">{featuredProducts[1].brand}</h3>
-            <p class="font-semibold mb-4">{featuredProducts[1].name}</p>
-            <!-- keyStat -->
-            <div class="bg-[#4a5d4e]/60 rounded-lg px-4 py-3 mb-4">
-              <span class="text-3xl font-bold text-white block">{featuredProducts[1].keyStat.value}</span>
-              <p class="text-xs text-[#d3e8d5] leading-tight mt-1">{featuredProducts[1].keyStat.label}</p>
-            </div>
-            <span class="text-[10px] text-[#b7ccb9] uppercase tracking-wider">{featuredProducts[1].satisfaction}% client satisfaction</span>
+        <a href={featuredProducts[1].affiliateUrl} target="_blank" rel="noopener sponsored" class="md:col-span-4 group relative overflow-hidden rounded-xl bg-slate-50 p-8 flex flex-col hover:shadow-xl transition-all border border-slate-200 min-h-[380px]">
+          {featuredProducts[1].badge && <span class="absolute top-6 right-6 inline-block bg-emerald-600 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full z-10">★ {featuredProducts[1].badge}</span>}
+          <div class="h-40 -mt-8 -mx-8 mb-6 overflow-hidden">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src={featuredProducts[1].image} alt={featuredProducts[1].name}/>
           </div>
-          <div class="flex items-center justify-between mt-6"><span class="text-2xl font-light">{featuredProducts[1].price}</span><span class="text-[#b7ccb9] font-bold text-sm">→</span></div>
-          <img class="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-luminosity" src={featuredProducts[1].image} alt={featuredProducts[1].name}/>
+          <div class="flex flex-col flex-grow">
+            <span class="text-xs uppercase tracking-widest text-slate-500 mb-2">{featuredProducts[1].category}</span>
+            <h3 class="text-3xl text-slate-900 mb-1" style="font-family:'Noto Serif',serif;">{featuredProducts[1].brand}</h3>
+            <p class="font-semibold text-slate-700 mb-4">{featuredProducts[1].name}</p>
+            <!-- keyStat -->
+            <div class="bg-white rounded-lg px-4 py-3 mb-4 shadow-sm border border-slate-200">
+              <span class="text-3xl font-bold text-emerald-600 block">{featuredProducts[1].keyStat.value}</span>
+              <p class="text-[10px] text-slate-500 leading-tight mt-1">{featuredProducts[1].keyStat.label}</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between mt-auto">
+            <span class="text-2xl font-light text-slate-900">{featuredProducts[1].price}</span>
+            <div class="flex items-center gap-2">
+               <span class="text-[10px] text-slate-500">{featuredProducts[1].satisfaction}% satisfied</span>
+               <span class="text-emerald-600 font-bold text-sm group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </div>
         </a>
       )}
       {featuredProducts[2] && (
