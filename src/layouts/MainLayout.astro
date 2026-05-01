@@ -41,23 +41,39 @@ const updatedDate = new Date().toLocaleDateString('en-US', { month: 'long', year
         <a href="/quiz" class="text-stone-500 hover:text-[#334537] transition-colors text-sm tracking-wide">Find My Program</a>
       </div>
 
-      <div class="flex items-center gap-6">
-        <a href="/quiz">
+      <div class="flex items-center gap-4 md:gap-6">
+        <a href="/quiz" class="hidden sm:block">
           <button class="bg-[#334537] text-white px-6 py-2.5 rounded-md text-sm font-medium hover:opacity-90 active:scale-[0.99] transition-all">
             Get Consulted
           </button>
         </a>
-        <div class="w-10 h-10 rounded-full overflow-hidden bg-[#eeeeec]">
+        <div class="w-10 h-10 rounded-full overflow-hidden bg-[#eeeeec] hidden sm:block">
           <img
             alt="User profile"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCCBiW-62CmZ8fJevQa_MgC9tXqOOJW_A-r_lONY4NUF_0KoRurqBop-8t7qmBhW2c_Cyo981ZwuutOsh8oaleBfOC0oWLvK9JPIpWAu2s4KIZka-wgNJ7wGvcCsS_j7q_kjb1zvgMA9Jp-XWsI2JZj9wMyDhajJZdQUcAC5k5-Hx_VHov3UuVz_gpPMomSgRZxS9qIeG48TtUU8JTALEj99q88hOwdv8CBHS45VQEjkrkxrlz4-QUCbO_krAMXOBBix5gY6NjK1w"
           />
         </div>
+        <!-- Hamburger Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center p-2 text-[#334537]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
       </div>
 
     </div>
     <div class="bg-stone-100/50 h-[1px] w-full"></div>
   </nav>
+
+  <!-- ─── MOBILE MENU ─── -->
+  <div id="mobile-menu" class="fixed inset-0 z-[100] bg-stone-50/95 backdrop-blur-md flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-300 md:hidden">
+    <button id="close-menu-btn" class="absolute top-6 right-8 p-2 text-[#334537]">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <a href="/" class="text-[#334537] text-2xl font-serif">Programs</a>
+    <a href="/comparison" class="text-stone-600 hover:text-[#334537] text-xl font-medium">Compare</a>
+    <a href="/comparison" class="text-stone-600 hover:text-[#334537] text-xl font-medium">Expert Reviews</a>
+    <a href="/quiz" class="text-stone-600 hover:text-[#334537] text-xl font-medium">Find My Program</a>
+    <a href="/quiz" class="bg-[#334537] text-white px-8 py-3 rounded-md text-lg mt-6 shadow-md">Get Consulted</a>
+  </div>
 
   <!-- ─── PAGE CONTENT ─── -->
   <slot />
@@ -84,5 +100,27 @@ const updatedDate = new Date().toLocaleDateString('en-US', { month: 'long', year
     </div>
   </footer>
 
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('close-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && closeBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('translate-x-full');
+      });
+      
+      closeBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('translate-x-full');
+      });
+
+      // Close menu when clicking a link
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('translate-x-full');
+        });
+      });
+    }
+  </script>
 </body>
 </html>
