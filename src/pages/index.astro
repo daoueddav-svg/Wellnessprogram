@@ -134,11 +134,25 @@ import { featuredProducts, expert } from '../data/products';
     </div>
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Article 1 -->
       <a href="/blog/ag1-vs-fs-greens" class="group relative overflow-hidden rounded-xl bg-slate-50 hover:shadow-xl transition-all border border-slate-200">
         <div class="p-8 h-full flex flex-col">
-          <span class="inline-block mb-4 bg-white text-slate-900 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-slate-200 w-fit">Comparison</span>
-          <h3 class="text-2xl text-slate-900 mb-3 group-hover:text-[#4A5D4E] transition-colors" style="font-family:'Noto Serif',serif;">AG1 versus FS Greens: Which Superfood Powder is Right for You in 2026</h3>
-          <p class="text-slate-700 text-sm mb-6 leading-relaxed flex-grow">We compare AG1 by Athletic Greens and FS Greens. Read our clinical breakdown of formulations, benefits, and costs to find the best green powder for your wellness routine.</p>
+          <span class="inline-block mb-4 bg-white text-slate-900 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-slate-200 w-fit shadow-sm">Nutrition</span>
+          <h3 class="text-2xl text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors" style="font-family:'Noto Serif',serif;">AG1 versus FS Greens: Which Superfood Powder is Right for You in 2026</h3>
+          <p class="text-slate-700 text-sm mb-6 leading-relaxed flex-grow">We compare AG1 by Athletic Greens and FS Greens. Read our objective breakdown of formulations, benefits, and costs to find the best green powder for your wellness routine.</p>
+          <div class="flex items-center gap-3 mt-auto pt-4 border-t border-slate-200">
+             <img class="w-8 h-8 rounded-full object-cover" src={expert.avatar} alt={expert.name}/>
+             <span class="text-xs text-slate-500 font-semibold">Published by {expert.name}</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Article 2 -->
+      <a href="/blog/mind-lab-pro-vs-hunter-focus" class="group relative overflow-hidden rounded-xl bg-slate-50 hover:shadow-xl transition-all border border-slate-200">
+        <div class="p-8 h-full flex flex-col">
+          <span class="inline-block mb-4 bg-white text-slate-900 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-slate-200 w-fit shadow-sm">Mental Performance</span>
+          <h3 class="text-2xl text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors" style="font-family:'Noto Serif',serif;">Mind Lab Pro versus Hunter Focus: The Ultimate Brain Booster Showdown</h3>
+          <p class="text-slate-700 text-sm mb-6 leading-relaxed flex-grow">A clinical comparison between Mind Lab Pro and Hunter Focus. We analyze the dosages and ingredient synergy to find the best nootropic for your cognitive demands.</p>
           <div class="flex items-center gap-3 mt-auto pt-4 border-t border-slate-200">
              <img class="w-8 h-8 rounded-full object-cover" src={expert.avatar} alt={expert.name}/>
              <span class="text-xs text-slate-500 font-semibold">Published by {expert.name}</span>
