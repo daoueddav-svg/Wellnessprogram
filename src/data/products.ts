@@ -347,10 +347,10 @@ export const categories: Category[] = [
 ];
 
 export const expert = {
-  name: "Dr. Elena Marchetti, MD",
-  title: "Preventive Medicine & Clinical Nutrition Specialist",
-  credentials: "MD — University of Milan · ISSN Certified · 12 years in private clinical practice",
-  bio: "Dr. Marchetti oversees all wellness program evaluations on this site. Every review is grounded in published clinical evidence, ingredient assessment, and benchmarking against current medical standards.",
-  avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCL5twYmoL5oWbfMgMnrA08IcULGJOY5mZm_RhXnz_a9M3kU66-IfbiSf5wad60htDor5R11OPsQkGIhbeQM-E9NX6748MRhv_9HTbDIMuCUyErTvR69HgZhB1pJIwnK7QSLCEPtKb8SB8Zh8Aj2AwP5OEtlP1icD5eAtIuNzdNz3CNmCFUsNCNIoVlaMSn66LHwPXSmbvxZwB4VuW2bSOzHaP_YufdGRTQ7j21QyPwmVmh-NGRJpDle7eA-FAb8kPy9HdisU_ZUAk",
+  name: "Wellness Sanctuary Team",
+  title: "Independent Review Board",
+  credentials: "Data-driven analysis · Unbiased testing",
+  bio: "We aggregate clinical study data, independent testing results, and community feedback to provide unbiased evaluations. Our goal is to cut through marketing hype with objective comparisons.",
+  avatar: "https://api.dicebear.com/7.x/initials/svg?seed=WS&backgroundColor=334537&textColor=ffffff",
   disclosure: "Some links on this site are affiliate links. We may earn a commission if you make a purchase, at no extra cost to you. Our reviews remain fully independent and are never influenced by our commercial partners.",
 };

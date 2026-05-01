@@ -12,8 +12,8 @@ const allSorted = [...products].sort((a, b) => b.expertScore - a.expertScore);
   <!-- Hero -->
   <header class="mb-20 text-center md:text-left max-w-3xl">
     <span class="text-xs uppercase tracking-widest text-[#334537] mb-4 block font-semibold">Comparative Analysis · Updated April 2024</span>
-    <h1 class="text-5xl md:text-6xl text-[#334537] leading-tight mb-6" style="font-family:'Noto Serif',serif;">Clinical Excellence,<br/><span class="italic">Put in Perspective.</span></h1>
-    <p class="text-lg text-[#434843] leading-relaxed">A rigorous evaluation based on 12 medical criteria. Each program is tested and validated by our independent expert panel.</p>
+    <h1 class="text-5xl md:text-6xl text-[#334537] leading-tight mb-6" style="font-family:'Noto Serif',serif;">Data-Driven Excellence,<br/><span class="italic">Put in Perspective.</span></h1>
+    <p class="text-lg text-[#434843] leading-relaxed">A rigorous evaluation based on 12 core criteria. Each program is tested and validated by our independent editorial panel.</p>
     <div class="flex items-center gap-3 mt-6">
       <img class="w-10 h-10 rounded-full object-cover grayscale" src={expert.avatar} alt={expert.name}/>
       <div>
@@ -145,7 +145,7 @@ const allSorted = [...products].sort((a, b) => b.expertScore - a.expertScore);
     <div class="flex flex-col md:flex-row items-start gap-10">
       <img class="w-20 h-20 rounded-full object-cover grayscale flex-shrink-0" src={expert.avatar} alt={expert.name}/>
       <div>
-        <span class="bg-[#334537] text-white text-[10px] uppercase tracking-widest font-bold px-3 py-1 rounded-full">✓ Medically Reviewed</span>
+        <span class="bg-[#334537] text-white text-[10px] uppercase tracking-widest font-bold px-3 py-1 rounded-full">✓ Independently Verified</span>
         <p class="font-semibold text-[#334537] text-xl mt-4 mb-1" style="font-family:'Noto Serif',serif;">{expert.name}</p>
         <p class="text-xs text-[#737872] uppercase tracking-wide mb-4">{expert.credentials}</p>
         <p class="text-sm text-[#434843] leading-relaxed mb-4">{expert.bio}</p>
