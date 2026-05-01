@@ -32,29 +32,29 @@ const updatedDate = new Date().toLocaleDateString('en-US', { month: 'long', year
   <nav class="sticky top-0 w-full z-50 bg-stone-50/80 backdrop-blur-xl shadow-sm">
     <div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
 
-      <a href="/" class="font-serif italic text-2xl text-[#334537]">Wellness Sanctuary</a>
+      <a href="/" class="font-serif italic text-2xl text-slate-900">Wellness Sanctuary</a>
 
       <div class="hidden md:flex gap-8 items-center">
-        <a href="/" class="text-stone-500 hover:text-[#334537] transition-colors text-sm tracking-wide">Home</a>
-        <a href="/comparison" class="text-stone-500 hover:text-[#334537] transition-colors text-sm tracking-wide">Compare</a>
-        <a href="/blog/ag1-vs-fs-greens" class="text-[#334537] font-semibold border-b-2 border-[#334537] pb-1 text-sm tracking-wide">Articles</a>
-        <a href="/quiz" class="text-stone-500 hover:text-[#334537] transition-colors text-sm tracking-wide">Quiz</a>
+        <a href="/" class="text-stone-500 hover:text-slate-900 transition-colors text-sm tracking-wide">Home</a>
+        <a href="/comparison" class="text-stone-500 hover:text-slate-900 transition-colors text-sm tracking-wide">Compare</a>
+        <a href="/blog/ag1-vs-fs-greens" class="text-slate-900 font-semibold border-b-2 border-emerald-600 pb-1 text-sm tracking-wide">Articles</a>
+        <a href="/quiz" class="text-stone-500 hover:text-slate-900 transition-colors text-sm tracking-wide">Quiz</a>
       </div>
 
       <div class="flex items-center gap-4 md:gap-6">
         <a href="/quiz" class="hidden sm:block">
-          <button class="bg-[#334537] text-white px-6 py-2.5 rounded-md text-sm font-medium hover:opacity-90 active:scale-[0.99] transition-all">
+          <button class="bg-emerald-600 text-white px-6 py-2.5 rounded-md text-sm font-medium hover:opacity-90 active:scale-[0.99] transition-all">
             Get Consulted
           </button>
         </a>
-        <div class="w-10 h-10 rounded-full overflow-hidden bg-[#eeeeec] hidden sm:block">
+        <div class="w-10 h-10 rounded-full overflow-hidden bg-slate-100 hidden sm:block">
           <img
             alt="User profile"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCCBiW-62CmZ8fJevQa_MgC9tXqOOJW_A-r_lONY4NUF_0KoRurqBop-8t7qmBhW2c_Cyo981ZwuutOsh8oaleBfOC0oWLvK9JPIpWAu2s4KIZka-wgNJ7wGvcCsS_j7q_kjb1zvgMA9Jp-XWsI2JZj9wMyDhajJZdQUcAC5k5-Hx_VHov3UuVz_gpPMomSgRZxS9qIeG48TtUU8JTALEj99q88hOwdv8CBHS45VQEjkrkxrlz4-QUCbO_krAMXOBBix5gY6NjK1w"
           />
         </div>
         <!-- Hamburger Menu Button -->
-        <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center p-2 text-[#334537]">
+        <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center p-2 text-slate-900">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
       </div>
@@ -65,14 +65,14 @@ const updatedDate = new Date().toLocaleDateString('en-US', { month: 'long', year
 
   <!-- ─── MOBILE MENU ─── -->
   <div id="mobile-menu" class="fixed inset-0 z-[100] bg-stone-50/95 backdrop-blur-md flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-300 md:hidden">
-    <button id="close-menu-btn" class="absolute top-6 right-8 p-2 text-[#334537]">
+    <button id="close-menu-btn" class="absolute top-6 right-8 p-2 text-slate-900">
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
     </button>
-    <a href="/" class="text-stone-600 hover:text-[#334537] text-xl font-medium">Home</a>
-    <a href="/comparison" class="text-stone-600 hover:text-[#334537] text-xl font-medium">Compare</a>
-    <a href="/blog/ag1-vs-fs-greens" class="text-[#334537] text-2xl font-serif">Articles</a>
-    <a href="/quiz" class="text-stone-600 hover:text-[#334537] text-xl font-medium">Quiz</a>
-    <a href="/quiz" class="bg-[#334537] text-white px-8 py-3 rounded-md text-lg mt-6 shadow-md">Get Consulted</a>
+    <a href="/" class="text-stone-600 hover:text-slate-900 text-xl font-medium">Home</a>
+    <a href="/comparison" class="text-stone-600 hover:text-slate-900 text-xl font-medium">Compare</a>
+    <a href="/blog/ag1-vs-fs-greens" class="text-slate-900 text-2xl font-serif">Articles</a>
+    <a href="/quiz" class="text-stone-600 hover:text-slate-900 text-xl font-medium">Quiz</a>
+    <a href="/quiz" class="bg-emerald-600 text-white px-8 py-3 rounded-md text-lg mt-6 shadow-md">Get Consulted</a>
   </div>
 
   <!-- ─── PAGE CONTENT ─── -->
@@ -81,7 +81,7 @@ const updatedDate = new Date().toLocaleDateString('en-US', { month: 'long', year
   <!-- ─── FOOTER ─── -->
   <footer class="bg-stone-100 py-12 px-8 w-full mt-16">
     <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-screen-2xl mx-auto">
-      <div class="font-serif text-lg text-[#334537]">Wellness Sanctuary</div>
+      <div class="font-serif text-lg text-slate-900">Wellness Sanctuary</div>
       <div class="flex flex-wrap justify-center gap-8">
         <a class="text-xs uppercase tracking-widest text-stone-500 hover:text-[#4A5D4E] transition-colors" href="#">Privacy Policy</a>
         <a class="text-xs uppercase tracking-widest text-stone-500 hover:text-[#4A5D4E] transition-colors" href="#">Terms of Service</a>

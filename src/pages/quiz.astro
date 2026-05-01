@@ -9,7 +9,7 @@ import { products, categories, expert } from '../data/products';
 <style>
   .card-option { cursor:pointer; transition:all 0.3s ease; }
   .card-option:hover { border-color:#b7ccb9; background:#f4f4f2; }
-  .card-option.selected { border-color:#334537; background:#d3e8d5; }
+  .card-option.selected { border-color:#0f172a; background:#d3e8d5; }
   .step { display:none; }
   .step.active { display:block; }
   #result-screen { display:none; }
@@ -26,41 +26,41 @@ import { products, categories, expert } from '../data/products';
     <div id="quiz-progress" class="w-full max-w-2xl mb-16 mx-auto text-center">
       <div class="flex justify-between items-end mb-4">
         <div class="text-left">
-          <span id="step-label" class="text-[10px] uppercase tracking-widest text-[#737872] block mb-1">Step 1 of 3</span>
-          <h1 id="step-title" class="text-3xl text-[#334537]" style="font-family:'Noto Serif',serif;">Your primary goal</h1>
+          <span id="step-label" class="text-[10px] uppercase tracking-widest text-slate-500 block mb-1">Step 1 of 3</span>
+          <h1 id="step-title" class="text-3xl text-slate-900" style="font-family:'Noto Serif',serif;">Your primary goal</h1>
         </div>
-        <span id="step-pct" class="text-sm italic text-[#334537]">33% Complete</span>
+        <span id="step-pct" class="text-sm italic text-slate-900">33% Complete</span>
       </div>
       <div class="h-[2px] w-full bg-[#e8e8e6] rounded-full overflow-hidden">
-        <div id="progress-bar" class="h-full bg-[#334537] rounded-full transition-all duration-700" style="width:33%"></div>
+        <div id="progress-bar" class="h-full bg-emerald-600 rounded-full transition-all duration-700" style="width:33%"></div>
       </div>
     </div>
 
     <!-- Step 1: Goal -->
     <div id="step-1" class="step active animate-in grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
       <div class="md:col-span-4">
-        <p class="italic text-2xl text-[#334537] leading-relaxed mb-6" style="font-family:'Noto Serif',serif;">"Define your goal so science can chart your path."</p>
-        <div class="bg-[#f4f4f2] p-6 rounded-xl">
-          <span class="material-symbols-outlined text-[#334537]" style="font-variation-settings:'FILL' 1">lightbulb</span>
-          <p class="text-sm text-[#434843] mt-3 leading-relaxed">Each goal corresponds to a distinct biological profile. Our algorithm selects programs with the most clinically relevant results for your objective.</p>
+        <p class="italic text-2xl text-slate-900 leading-relaxed mb-6" style="font-family:'Noto Serif',serif;">"Define your goal so science can chart your path."</p>
+        <div class="bg-slate-50 p-6 rounded-xl">
+          <span class="material-symbols-outlined text-slate-900" style="font-variation-settings:'FILL' 1">lightbulb</span>
+          <p class="text-sm text-slate-700 mt-3 leading-relaxed">Each goal corresponds to a distinct biological profile. Our algorithm selects programs with the most clinically relevant results for your objective.</p>
         </div>
       </div>
       <div class="md:col-span-8 space-y-4">
-        <h3 class="text-xs uppercase tracking-[0.2em] text-[#737872] mb-6">What is your primary goal?</h3>
+        <h3 class="text-xs uppercase tracking-[0.2em] text-slate-500 mb-6">What is your primary goal?</h3>
         {categories.map(cat => (
-          <div class="card-option border-2 border-[#e8e8e6] rounded-xl p-5 flex items-center justify-between" data-step="1" data-value={cat}>
+          <div class="card-option border-2 border-slate-200 rounded-xl p-5 flex items-center justify-between" data-step="1" data-value={cat}>
             <div class="flex items-center gap-4">
-              <span class="material-symbols-outlined text-[#334537]">
+              <span class="material-symbols-outlined text-slate-900">
                 {cat === "Weight Loss"   ? "monitor_weight" :
                  cat === "Supplements"  ? "science"         :
                  cat === "Fitness"      ? "fitness_center"  :
                  cat === "Mental Health"? "psychology"      :
                  cat === "Sleep"        ? "bedtime"         : "restaurant"}
               </span>
-              <h4 class="font-semibold text-[#334537]">{cat}</h4>
+              <h4 class="font-semibold text-slate-900">{cat}</h4>
             </div>
-            <div class="radio-indicator w-5 h-5 border-2 border-[#c3c8c1] rounded-full flex items-center justify-center">
-              <div class="w-2.5 h-2.5 bg-[#334537] rounded-full opacity-0 transition-opacity"></div>
+            <div class="radio-indicator w-5 h-5 border-2 border-slate-300 rounded-full flex items-center justify-center">
+              <div class="w-2.5 h-2.5 bg-emerald-600 rounded-full opacity-0 transition-opacity"></div>
             </div>
           </div>
         ))}
@@ -70,31 +70,31 @@ import { products, categories, expert } from '../data/products';
     <!-- Step 2: Lifestyle -->
     <div id="step-2" class="step animate-in grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
       <div class="md:col-span-4">
-        <p class="italic text-2xl text-[#334537] leading-relaxed mb-6" style="font-family:'Noto Serif',serif;">"Your daily habits build the architecture of your health."</p>
-        <div class="bg-[#f4f4f2] p-6 rounded-xl">
-          <span class="material-symbols-outlined text-[#334537]" style="font-variation-settings:'FILL' 1">schedule</span>
-          <p class="text-sm text-[#434843] mt-3 leading-relaxed">Available time determines program effectiveness. A protocol misaligned with your schedule will always be abandoned.</p>
+        <p class="italic text-2xl text-slate-900 leading-relaxed mb-6" style="font-family:'Noto Serif',serif;">"Your daily habits build the architecture of your health."</p>
+        <div class="bg-slate-50 p-6 rounded-xl">
+          <span class="material-symbols-outlined text-slate-900" style="font-variation-settings:'FILL' 1">schedule</span>
+          <p class="text-sm text-slate-700 mt-3 leading-relaxed">Available time determines program effectiveness. A protocol misaligned with your schedule will always be abandoned.</p>
         </div>
       </div>
       <div class="md:col-span-8 space-y-4">
-        <h3 class="text-xs uppercase tracking-[0.2em] text-[#737872] mb-6">What best describes your current lifestyle?</h3>
+        <h3 class="text-xs uppercase tracking-[0.2em] text-slate-500 mb-6">What best describes your current lifestyle?</h3>
         {[
           { val:"active",       icon:"directions_run",  label:"Active & Restorative",   desc:"Regular physical activity, focused on performance and recovery." },
           { val:"professional", icon:"business_center", label:"Urban Professional",      desc:"Heavy workload, chronic stress, limited time for health routines." },
           { val:"wellness",     icon:"spa",             label:"Wellness Enthusiast",     desc:"Strong interest in longevity, supplementation and biohacking." },
         ].map(opt => (
-          <div class="card-option border-2 border-[#e8e8e6] rounded-xl p-5 flex items-center justify-between" data-step="2" data-value={opt.val}>
+          <div class="card-option border-2 border-slate-200 rounded-xl p-5 flex items-center justify-between" data-step="2" data-value={opt.val}>
             <div class="flex items-center gap-4">
-              <div class="w-14 h-14 rounded-full bg-[#f4f4f2] flex items-center justify-center flex-shrink-0">
-                <span class="material-symbols-outlined text-[#334537]">{opt.icon}</span>
+              <div class="w-14 h-14 rounded-full bg-slate-50 flex items-center justify-center flex-shrink-0">
+                <span class="material-symbols-outlined text-slate-900">{opt.icon}</span>
               </div>
               <div>
-                <h4 class="font-semibold text-[#334537]">{opt.label}</h4>
-                <p class="text-sm text-[#737872] mt-0.5">{opt.desc}</p>
+                <h4 class="font-semibold text-slate-900">{opt.label}</h4>
+                <p class="text-sm text-slate-500 mt-0.5">{opt.desc}</p>
               </div>
             </div>
-            <div class="radio-indicator w-5 h-5 border-2 border-[#c3c8c1] rounded-full flex-shrink-0 flex items-center justify-center ml-4">
-              <div class="w-2.5 h-2.5 bg-[#334537] rounded-full opacity-0 transition-opacity"></div>
+            <div class="radio-indicator w-5 h-5 border-2 border-slate-300 rounded-full flex-shrink-0 flex items-center justify-center ml-4">
+              <div class="w-2.5 h-2.5 bg-emerald-600 rounded-full opacity-0 transition-opacity"></div>
             </div>
           </div>
         ))}
@@ -104,27 +104,27 @@ import { products, categories, expert } from '../data/products';
     <!-- Step 3: Budget -->
     <div id="step-3" class="step animate-in grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
       <div class="md:col-span-4">
-        <p class="italic text-2xl text-[#334537] leading-relaxed mb-6" style="font-family:'Noto Serif',serif;">"The best program is the one you can sustain long-term."</p>
-        <div class="bg-[#f4f4f2] p-6 rounded-xl">
-          <span class="material-symbols-outlined text-[#334537]" style="font-variation-settings:'FILL' 1">payments</span>
-          <p class="text-sm text-[#434843] mt-3 leading-relaxed">A reasonable monthly wellness investment sits between 1% and 3% of your total health budget. We guide you within that range.</p>
+        <p class="italic text-2xl text-slate-900 leading-relaxed mb-6" style="font-family:'Noto Serif',serif;">"The best program is the one you can sustain long-term."</p>
+        <div class="bg-slate-50 p-6 rounded-xl">
+          <span class="material-symbols-outlined text-slate-900" style="font-variation-settings:'FILL' 1">payments</span>
+          <p class="text-sm text-slate-700 mt-3 leading-relaxed">A reasonable monthly wellness investment sits between 1% and 3% of your total health budget. We guide you within that range.</p>
         </div>
       </div>
       <div class="md:col-span-8 space-y-4">
-        <h3 class="text-xs uppercase tracking-[0.2em] text-[#737872] mb-6">What is your monthly budget?</h3>
+        <h3 class="text-xs uppercase tracking-[0.2em] text-slate-500 mb-6">What is your monthly budget?</h3>
         {[
           { val:"low",   label:"Under $20/month",    desc:"Access to the best premium digital wellness platforms." },
           { val:"mid",   label:"$20 – $50/month",    desc:"Optimal range: coaching + tracking + expert content." },
           { val:"high",  label:"$50 – $100/month",   desc:"Programs with personal coaching and biological data." },
           { val:"elite", label:"$100+/month",         desc:"Advanced medical protocols with continuous monitoring." },
         ].map(opt => (
-          <div class="card-option border-2 border-[#e8e8e6] rounded-xl p-5 flex items-center justify-between" data-step="3" data-value={opt.val}>
+          <div class="card-option border-2 border-slate-200 rounded-xl p-5 flex items-center justify-between" data-step="3" data-value={opt.val}>
             <div>
-              <h4 class="font-semibold text-[#334537]">{opt.label}</h4>
-              <p class="text-sm text-[#737872] mt-0.5">{opt.desc}</p>
+              <h4 class="font-semibold text-slate-900">{opt.label}</h4>
+              <p class="text-sm text-slate-500 mt-0.5">{opt.desc}</p>
             </div>
-            <div class="radio-indicator w-5 h-5 border-2 border-[#c3c8c1] rounded-full flex-shrink-0 flex items-center justify-center ml-4">
-              <div class="w-2.5 h-2.5 bg-[#334537] rounded-full opacity-0 transition-opacity"></div>
+            <div class="radio-indicator w-5 h-5 border-2 border-slate-300 rounded-full flex-shrink-0 flex items-center justify-center ml-4">
+              <div class="w-2.5 h-2.5 bg-emerald-600 rounded-full opacity-0 transition-opacity"></div>
             </div>
           </div>
         ))}
@@ -132,12 +132,12 @@ import { products, categories, expert } from '../data/products';
     </div>
 
     <!-- Navigation -->
-    <div id="quiz-nav" class="flex items-center justify-between pt-12 mt-12 border-t border-[#eeeeec] max-w-4xl">
-      <button id="btn-back" class="text-xs uppercase tracking-widest text-[#737872] hover:text-[#334537] transition-colors flex items-center gap-2" style="display:none;">
+    <div id="quiz-nav" class="flex items-center justify-between pt-12 mt-12 border-t border-slate-200 max-w-4xl">
+      <button id="btn-back" class="text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 transition-colors flex items-center gap-2" style="display:none;">
         <span class="material-symbols-outlined text-sm">arrow_back</span> Back
       </button>
       <div></div>
-      <button id="btn-next" class="bg-[#334537] text-white px-10 py-4 rounded-md text-sm tracking-widest uppercase hover:opacity-90 transition-all shadow-md opacity-40 cursor-not-allowed" disabled>
+      <button id="btn-next" class="bg-emerald-600 text-white px-10 py-4 rounded-md text-sm tracking-widest uppercase hover:opacity-90 transition-all shadow-md opacity-40 cursor-not-allowed" disabled>
         Continue →
       </button>
     </div>
@@ -145,12 +145,12 @@ import { products, categories, expert } from '../data/products';
     <!-- Result Screen -->
     <div id="result-screen" class="animate-in pt-8">
       <div class="text-center mb-16">
-        <span class="text-[10px] uppercase tracking-widest text-[#334537] font-bold">Analysis complete</span>
-        <h2 class="text-4xl md:text-5xl text-[#334537] mt-4 mb-4" style="font-family:'Noto Serif',serif;">Your personalised recommendation</h2>
-        <p class="text-[#434843]">Based on your clinical profile and our medical evaluation criteria.</p>
+        <span class="text-[10px] uppercase tracking-widest text-slate-900 font-bold">Analysis complete</span>
+        <h2 class="text-4xl md:text-5xl text-slate-900 mt-4 mb-4" style="font-family:'Noto Serif',serif;">Your personalised recommendation</h2>
+        <p class="text-slate-700">Based on your clinical profile and our medical evaluation criteria.</p>
       </div>
       <div id="result-card" class="bg-white rounded-2xl shadow-xl overflow-hidden mb-8 max-w-3xl mx-auto">
-        <div class="bg-[#334537] text-white p-8">
+        <div class="bg-emerald-600 text-white p-8">
           <span class="text-[10px] uppercase tracking-widest text-[#b7ccb9] mb-2 block">★ Best match for your profile</span>
           <h3 id="res-brand" class="text-3xl mb-1" style="font-family:'Noto Serif',serif;"></h3>
           <p id="res-name" class="text-[#d3e8d5] text-sm"></p>
@@ -161,25 +161,25 @@ import { products, categories, expert } from '../data/products';
           </div>
         </div>
         <div class="p-8">
-          <p class="font-semibold text-[#334537] mb-2">Our medical expert's review:</p>
-          <p id="res-review" class="text-[#434843] text-sm leading-relaxed italic mb-6"></p>
+          <p class="font-semibold text-slate-900 mb-2">Our medical expert's review:</p>
+          <p id="res-review" class="text-slate-700 text-sm leading-relaxed italic mb-6"></p>
           <div class="grid grid-cols-2 gap-6 mb-8">
-            <div><span class="text-[10px] uppercase font-bold text-[#334537] block mb-3">Pros</span><ul id="res-pros" class="space-y-2"></ul></div>
+            <div><span class="text-[10px] uppercase font-bold text-slate-900 block mb-3">Pros</span><ul id="res-pros" class="space-y-2"></ul></div>
             <div><span class="text-[10px] uppercase font-bold text-[#553a3e] block mb-3">Cons</span><ul id="res-cons" class="space-y-2"></ul></div>
           </div>
           <a id="res-cta" href="#" target="_blank" rel="noopener sponsored">
-            <button class="w-full bg-[#334537] text-white py-4 rounded-xl font-semibold text-lg hover:bg-[#4a5d4e] transition-all">Start this program →</button>
+            <button class="w-full bg-emerald-600 text-white py-4 rounded-xl font-semibold text-lg hover:bg-emerald-700 transition-all">Start this program →</button>
           </a>
-          <p class="text-center text-xs text-[#737872] mt-3 italic">Affiliate link · we earn a small commission at no extra cost to you</p>
+          <p class="text-center text-xs text-slate-500 mt-3 italic">Affiliate link · we earn a small commission at no extra cost to you</p>
         </div>
       </div>
-      <div class="flex items-center gap-4 max-w-3xl mx-auto bg-[#f4f4f2] p-6 rounded-xl">
-        <img class="w-12 h-12 rounded-full object-cover grayscale flex-shrink-0" src={expert.avatar} alt={expert.name}/>
+      <div class="flex items-center gap-4 max-w-3xl mx-auto bg-slate-50 p-6 rounded-xl">
+        <img class="w-12 h-12 rounded-full object-cover flex-shrink-0" src={expert.avatar} alt={expert.name}/>
         <div>
-          <p class="text-xs font-semibold text-[#334537]">Reviewed by {expert.name}</p>
-          <p class="text-[10px] text-[#737872]">{expert.title}</p>
+          <p class="text-xs font-semibold text-slate-900">Reviewed by {expert.name}</p>
+          <p class="text-[10px] text-slate-500">{expert.title}</p>
         </div>
-        <a href="/comparison" class="ml-auto text-xs uppercase tracking-widest text-[#334537] font-bold hover:underline whitespace-nowrap">See all programs →</a>
+        <a href="/comparison" class="ml-auto text-xs uppercase tracking-widest text-slate-900 font-bold hover:underline whitespace-nowrap">See all programs →</a>
       </div>
     </div>
 
@@ -260,9 +260,9 @@ import { products, categories, expert } from '../data/products';
     (document.getElementById('res-review')! as HTMLElement).textContent = rec.expertReview;
     (document.getElementById('res-cta')!    as HTMLAnchorElement).href  = rec.affiliateUrl;
     document.getElementById('res-pros')!.innerHTML = rec.pros.map((p: string) =>
-      `<li class="flex items-start gap-2 text-sm text-[#434843]"><span class="material-symbols-outlined text-sm text-[#334537]" style="font-variation-settings:'FILL' 1">check_circle</span>${p}</li>`).join('');
+      `<li class="flex items-start gap-2 text-sm text-slate-700"><span class="material-symbols-outlined text-sm text-slate-900" style="font-variation-settings:'FILL' 1">check_circle</span>${p}</li>`).join('');
     document.getElementById('res-cons')!.innerHTML = rec.cons.map((c: string) =>
-      `<li class="flex items-start gap-2 text-sm text-[#434843]"><span class="material-symbols-outlined text-sm text-[#553a3e]">info</span>${c}</li>`).join('');
+      `<li class="flex items-start gap-2 text-sm text-slate-700"><span class="material-symbols-outlined text-sm text-[#553a3e]">info</span>${c}</li>`).join('');
     window.scrollTo({ top:0, behavior:'smooth' });
   }
   showStep(1);
