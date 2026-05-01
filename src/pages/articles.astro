@@ -1,0 +1,51 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+const title = "Clinical Insights & Articles | Wellness Sanctuary";
+const description = "Explore our latest data-driven articles, clinical comparisons, and independent reviews of top wellness programs and nootropics.";
+
+const articles = [
+  {
+    title: "AG1 versus FS Greens: Which Superfood Powder is Right for You in 2026",
+    url: "/blog/ag1-vs-fs-greens",
+    category: "Nutrition",
+    date: "May 2026"
+  },
+  {
+    title: "Mind Lab Pro versus Hunter Focus: The Ultimate Brain Booster Showdown 2026",
+    url: "/blog/mind-lab-pro-vs-hunter-focus",
+    category: "Mental Performance",
+    date: "May 2026"
+  }
+];
+---
+
+<MainLayout title={title} description={description}>
+  <main class="max-w-4xl mx-auto px-6 py-20 min-h-screen">
+    <header class="mb-16">
+      <h1 class="text-5xl md:text-6xl text-slate-900 leading-tight mb-6" style="font-family:'Noto Serif',serif;">
+        Clinical Insights & Articles
+      </h1>
+      <p class="text-lg text-slate-700">Data-driven analysis and independent reviews to guide your wellness journey.</p>
+    </header>
+
+    <div class="space-y-4">
+      {articles.map((article) => (
+        <a href={article.url} class="group block bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-all hover:border-emerald-600">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-2 block">{article.category}</span>
+              <h2 class="text-2xl text-slate-900 group-hover:text-emerald-600 transition-colors" style="font-family:'Noto Serif',serif;">
+                {article.title}
+              </h2>
+            </div>
+            <div class="flex items-center gap-4 text-slate-500">
+              <span class="text-sm hidden md:block">{article.date}</span>
+              <span class="text-emerald-600 group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </main>
+</MainLayout>
