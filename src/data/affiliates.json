@@ -7,5 +7,7 @@
   "whoop": { "name": "WHOOP", "finalUrl": "https://www.whoop.com/?affiliate=YOUR_IMPACT_ID" },
   "levels-health": { "name": "Levels", "finalUrl": "https://www.levelshealth.com/?affiliate=YOUR_IMPACT_ID" },
   "eight-sleep": { "name": "Eight Sleep", "finalUrl": "https://www.eightsleep.com/?affiliate=YOUR_IMPACT_ID" },
-  "care-of": { "name": "Care/of", "finalUrl": "https://www.takecareof.com/?affiliate=YOUR_IMPACT_ID" }
+  "care-of": { "name": "Care/of", "finalUrl": "https://www.takecareof.com/?affiliate=YOUR_IMPACT_ID" },
+  "ag1": { "name": "AG1", "finalUrl": "https://athleticgreens.com/?affiliate=YOUR_IMPACT_ID" },
+  "fs-greens": { "name": "FS Greens", "finalUrl": "https://freesoul.com/?affiliate=YOUR_IMPACT_ID" }
 }
