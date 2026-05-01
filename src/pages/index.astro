@@ -121,6 +121,30 @@ import { featuredProducts, expert } from '../data/products';
     </div>
   </section>
 
+  <!-- Latest Insights -->
+  <section class="mb-32">
+    <div class="flex justify-between items-end mb-10">
+      <div>
+        <span class="text-xs uppercase tracking-widest text-[#737872] mb-3 block font-semibold">Latest Insights</span>
+        <h2 class="text-4xl text-[#334537]" style="font-family:'Noto Serif',serif;">Clinical Comparisons</h2>
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <a href="/blog/ag1-vs-fs-greens" class="group relative overflow-hidden rounded-xl bg-[#f4f4f2] hover:shadow-xl transition-all border border-[#e8e8e6]">
+        <div class="p-8 h-full flex flex-col">
+          <span class="inline-block mb-4 bg-white text-[#334537] text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-[#e8e8e6] w-fit">Comparison</span>
+          <h3 class="text-2xl text-[#334537] mb-3 group-hover:text-[#4A5D4E] transition-colors" style="font-family:'Noto Serif',serif;">AG1 versus FS Greens: Which Superfood Powder is Right for You in 2026</h3>
+          <p class="text-[#434843] text-sm mb-6 leading-relaxed flex-grow">We compare AG1 by Athletic Greens and FS Greens. Read our clinical breakdown of formulations, benefits, and costs to find the best green powder for your wellness routine.</p>
+          <div class="flex items-center gap-3 mt-auto pt-4 border-t border-[#e8e8e6]">
+             <img class="w-8 h-8 rounded-full object-cover grayscale" src={expert.avatar} alt={expert.name}/>
+             <span class="text-xs text-[#737872] font-semibold">Medically Reviewed by {expert.name}</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
   <!-- Quiz CTA -->
   <section class="py-32 px-8 text-center max-w-4xl mx-auto">
     <h2 class="text-4xl md:text-6xl text-[#334537] mb-8 italic" style="font-family:'Noto Serif',serif;">Which program is right for you?</h2>
